@@ -10,6 +10,7 @@ body {
     background-color: #121212;
     color: #ffffff;
     line-height: 1.6;
+    padding: 0 1rem; /* Added padding for smaller screens */
 }
 
 header {
@@ -47,7 +48,7 @@ header nav ul li a:hover {
 }
 
 .hero {
-    background: url(./Images/www.reallygreatsite.com.png) 
+    background: url(www.reallygreatsite.com.png);
     height: 60vh;
     display: flex;
     justify-content: center;
@@ -118,8 +119,7 @@ section h2 {
 .movie-card img {
     width: 100%;
     border-radius: 10px;
-    width: 210px;
-    height: 250px;
+    height: 300px;
 }
 
 footer {
@@ -131,8 +131,8 @@ footer {
 
 /* Media Queries for Responsive Design */
 
-/* For tablets (screen width 768px and above) */
-@media (max-width: 1024px) {
+/* For small tablets and larger smartphones (screen width 768px and below) */
+@media (max-width: 768px) {
     .hero h1 {
         font-size: 2rem;
     }
@@ -147,15 +147,20 @@ footer {
     }
 
     .movie-card {
-        width: 130px;
+        width: 120px; /* Reduce width for smaller screens */
     }
 }
 
 /* For smartphones (screen width 480px and below) */
 @media (max-width: 480px) {
+    body {
+        padding: 0 0.5rem; /* Less padding for very small screens */
+    }
+
     header {
         flex-direction: column;
         align-items: flex-start;
+        padding: 1rem 0.5rem; /* Adjusted padding for smaller screens */
     }
     
     header .logo {
@@ -166,10 +171,13 @@ footer {
     header nav ul {
         flex-direction: column;
         gap: 0.5rem;
+        width: 100%;
+        text-align: left;
     }
     
     .hero {
         height: 40vh;
+        padding: 1rem;
     }
 
     .hero h1 {
@@ -189,11 +197,18 @@ footer {
         font-size: 1.5rem;
     }
 
-    .movie-card {
-        width: 100px;
-    }
-
     .movie-grid {
         gap: 0.5rem;
+        flex-direction: column; /* Stack movies vertically */
+    }
+
+    .movie-card {
+        width: 100%;
+        max-width: 100px; /* Ensure cards don't stretch too much on small screens */
+        margin: 0 auto; /* Center align movie cards */
+    }
+
+    footer {
+        padding: 0.5rem;
     }
 }
