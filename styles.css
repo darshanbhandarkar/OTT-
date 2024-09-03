@@ -48,8 +48,6 @@ header nav ul li a:hover {
 }
 
 .hero {
-    background: url(www.reallygreatsite.com.png);
-    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,7 +106,7 @@ section h2 {
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
-    width: 250px;
+    width: 150px;
     transition: transform 0.3s;
 }
 
@@ -119,8 +117,7 @@ section h2 {
 .movie-card img {
     width: 100%;
     border-radius: 10px;
-    height: 300px;
-    width: 210px;
+    height: 150px;
 }
 
 footer {
