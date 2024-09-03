@@ -47,7 +47,7 @@ header nav ul li a:hover {
 }
 
 .hero {
-    background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+    background: url(www.reallygreatsite.com.png) no-repeat center center/cover;
     height: 60vh;
     display: flex;
     justify-content: center;
